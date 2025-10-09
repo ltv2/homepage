@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O ACHADOS PRIME - Redirecionador de Links</title>
     
+    <!-- Tailwind CSS para estilização moderna e responsiva -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Google Fonts para a fonte Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
+        /* Estilos personalizados para complementar o Tailwind */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #111827;
@@ -28,6 +31,13 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
         }
         .btn-link {
             transition: all 0.3s ease;
@@ -39,6 +49,8 @@
     </style>
 </head>
 <body class="text-gray-300 antialiased">
+
+    <!-- Container Principal -->
     <div class="container mx-auto px-4 py-8 md:py-16">
 
         <header class="text-center mb-16">
@@ -50,45 +62,52 @@
             </p>
         </header>
 
+        <!-- Seção de Produtos em Grade -->
         <main>
-
-            <div class="max-w-md mx-auto">
-                <div class="card rounded-2xl overflow-hidden">
-                    <img src="https://raw.githubusercontent.com/ltv2/homepage/refs/heads/main/imgs/nacproduto.webp" alt="NAC em promoção!" class="w-full h-auto" onerror="this.onerror=null;this.src='https://placehold.co/400x600/111827/FFFFFF?text=Capa+do+E-book';">
-                    <div class="p-6">
-                        <h2 class="text-2xl font-bold text-white text-center">NAC N Acetil Cisteina Acetilcisteína</h2>
-                        <p class="text-center text-gray-400 mt-1">500mg 100% Natural 60 ou 120 Cápsulas</p>
-                        
-                        <div class="mt-6 flex flex-col gap-4">
-                            <a href="https://s.shopee.com.br/8fJb3MWqyU" target="_blank" rel="noopener noreferrer" class="btn-link bg-white text-gray-900 font-bold py-3 px-6 rounded-lg text-center shadow-lg hover:bg-gray-200">
-                                🛒 Comprar agora!
-                            </a>
+            <!-- Seção Produtos -->
+            <section>
+                <h2 class="text-3xl font-bold text-white mb-8 border-l-4 border-cyan-400 pl-4">Produtos</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                    <!-- Card do Produto 1 -->
+                    <div class="card rounded-2xl overflow-hidden">
+                        <img src="https://raw.githubusercontent.com/ltv2/homepage/refs/heads/main/imgs/nacproduto.webp" alt="NAC em promoção!" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/1F2937/FFFFFF?text=NAC';">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h2 class="text-xl font-bold text-white text-center">NAC N Acetil Cisteina</h2>
+                            <p class="text-center text-gray-400 mt-1 text-sm flex-grow">500mg 100% Natural 60 ou 120 Cápsulas</p>
+                            <div class="mt-6 flex flex-col gap-4">
+                                <a href="https://s.shopee.com.br/8fJb3MWqyU" target="_blank" rel="noopener noreferrer" class="btn-link bg-white text-gray-900 font-bold py-3 px-6 rounded-lg text-center shadow-lg hover:bg-gray-200">
+                                    🛒 Comprar agora!
+                                </a>
+                            </div>
                         </div>
                     </div>
+                    <!-- Adicione mais produtos aqui -->
                 </div>
-            </div>
+            </section>
 
-            <div class="max-w-md mx-auto">
-                <div class="card rounded-2xl overflow-hidden">
-                    <img src="https://raw.githubusercontent.com/ltv2/timidez-ebook/refs/heads/main/imgs/capa.png" alt="Capa do E-book Vencendo a Timidez" class="w-full h-auto" onerror="this.onerror=null;this.src='https://placehold.co/400x600/111827/FFFFFF?text=Capa+do+E-book';">
-                    <div class="p-6">
-                        <h2 class="text-2xl font-bold text-white text-center">Vencendo a Timidez</h2>
-                        <p class="text-center text-gray-400 mt-1">O Guia Definitivo</p>
-                        
-                        <div class="mt-6 flex flex-col gap-4">
-                            <a href="https://ltv2.github.io/timidez-ebook/" target="_blank" rel="noopener noreferrer" class="btn-link bg-white text-gray-900 font-bold py-3 px-6 rounded-lg text-center shadow-lg hover:bg-gray-200">
-                                🛒 Comprar agora!
-                            </a>
-                            <a href="https://ltv2.github.io/timidez-ebook-monetizze/" target="_blank" rel="noopener noreferrer" class="btn-link bg-cyan-500 text-white font-bold py-3 px-6 rounded-lg text-center shadow-lg hover:bg-cyan-600">
-                                🚀 Garantir o meu exemplar!
-                            </a>
+            <!-- Seção E-books -->
+            <section class="mt-16">
+                <h2 class="text-3xl font-bold text-white mb-8 border-l-4 border-cyan-400 pl-4">E-books</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                    <!-- Card do Produto 2 -->
+                    <div class="card rounded-2xl overflow-hidden">
+                        <img src="https://raw.githubusercontent.com/ltv2/timidez-ebook/refs/heads/main/imgs/capa.png" alt="Capa do E-book Vencendo a Timidez" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/1F2937/FFFFFF?text=Vencendo+a+Timidez';">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h2 class="text-xl font-bold text-white text-center">Vencendo a Timidez</h2>
+                            <p class="text-center text-gray-400 mt-1 text-sm flex-grow">O Guia Definitivo para sua Carreira</p>
+                            <div class="mt-6 flex flex-col gap-4">
+                                <a href="https://ltv2.github.io/timidez-ebook/" target="_blank" rel="noopener noreferrer" class="btn-link bg-white text-gray-900 font-bold py-3 px-6 rounded-lg text-center shadow-lg hover:bg-gray-200">
+                                    🛒 Comprar agora!
+                                </a>
+                                <a href="https://ltv2.github.io/timidez-ebook-monetizze/" target="_blank" rel="noopener noreferrer" class="btn-link bg-cyan-500 text-white font-bold py-3 px-6 rounded-lg text-center shadow-lg hover:bg-cyan-600">
+                                    🚀 Garantir o meu exemplar!
+                                </a>
+                            </div>
                         </div>
                     </div>
+                     <!-- Adicione mais e-books aqui -->
                 </div>
-            </div>
-            
-            <!-- News -->
-
+            </section>
         </main>
 
         <footer class="text-center mt-16">
@@ -99,3 +118,4 @@
 
 </body>
 </html>
+
